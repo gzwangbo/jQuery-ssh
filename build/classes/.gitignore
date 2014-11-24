@@ -1,0 +1,10 @@
+/applicationContext-actions.xml
+/applicationContext-commons.xml
+/applicationContext-dao.xml
+/applicationContext-service.xml
+/com/
+/hibernate.cfg.xml
+/log4j.properties
+/struts.properties
+/struts.xml
+/upload.properties

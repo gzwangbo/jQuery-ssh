@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:aop="http://www.springframework.org/schema/aop"
+		xmlns:tx="http://www.springframework.org/schema/tx"
+		xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+	<!-- 
+	<bean id="userManager" class="com.graduate.manager.impl.UserManagerImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<bean id="adminManager" class="com.graduate.manager.impl.AdminManagerImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean>
+	
+	<bean id="studentManager" class="com.graduate.manager.impl.StudentManagerImpl">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean> -->
+	<!-- testService -->
+	<!-- <bean id="testService" class="com.wb.test.TestService">
+		<property name="sessionFactory" ref="sessionFactory"/>
+	</bean> -->
+	<bean id="personService" class="com.wb.service.PersonService">
+		<property name="personDaoImpl" ref="personDaoImpl"/>
+	</bean>
+</beans>

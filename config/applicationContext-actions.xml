@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:aop="http://www.springframework.org/schema/aop"
+		xmlns:tx="http://www.springframework.org/schema/tx"
+		xsi:schemaLocation="
+			http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+			http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.5.xsd
+			http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-2.5.xsd">
+		
+<!-- 	<bean id="loginAction" class="com.graduate.action.LoginAction" scope="prototype">
+		<property name="userManager" ref="userManager"></property>
+	</bean>
+	
+	<bean id="adminAction" class="com.graduate.action.AdminAction" scope="prototype">
+		<property name="adminManager" ref="adminManager"></property>
+	</bean>
+	
+	<bean id="studentAction" class="com.graduate.action.StudentAction" scope="prototype">
+		<property name="studentManager" ref="studentManager"></property>
+	</bean>
+	
+	<bean id="uploadAction" class="com.graduate.action.UploadAction" scope="prototype">
+	</bean>
+	<bean id="downloadAction" class="com.graduate.action.DownloadAction" scope="prototype">
+	</bean> -->
+	<bean id="personAction" class="com.wb.action.PersonAction" scope="prototype">
+     <property name="personService" ref="personService"></property>
+	</bean> 
+  
+</beans>

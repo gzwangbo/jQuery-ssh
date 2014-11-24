@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.wb.bean">
+	<class name="User"  table="t_user">
+		<id name="id">
+			<generator class="native"/>
+		</id>
+		
+		<property name="name"/>
+		<property name="password"/>
+		<property name="loginName"/>
+		<property name="email"/>
+		<property name="phoneNumber"/>
+		<property name="description"/>
+		<!--User和ROle是多对多的关系  -->
+		<set name="roles" table="t_user_role" >
+		    <key column="roleId"></key>
+		    <many-to-many class="User" column="userId"></many-to-many>
+		    
+		</set>
+	
+		<!--User和Department是多对一的关系  -->
+		<many-to-one name="department" class="Department" column="departmentId"></many-to-one>
+	</class>
+</hibernate-mapping>
